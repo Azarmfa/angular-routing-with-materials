@@ -1,0 +1,19 @@
+<!-- <ul>
+  <li *ngFor="let user of users">
+    <a [routerLink]="['/user', user.id]">{{ user.name }}</a>
+  </li>
+</ul> -->
+
+<button mat-raised-button color="primary" [matMenuTriggerFor]="menu">
+  Menu
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item *ngFor="let user of users">
+    <a [routerLink]="['/user', user.id]">{{ user.name }}</a>
+  </button>
+</mat-menu>
+
+<!-- <br />
+<input type="checkbox" name="pepperoni" />
+<label for="pepperoni">Pepperoni</label>
+<mat-checkbox name="Pepperoni">Pepperoni</mat-checkbox> -->
